@@ -63,3 +63,91 @@ vue ui
 ![](/assets/npm_run_serve.png)
 
 ![](/assets/serve_done.png)
+
+
+
+
+
+## 6. vue-router
+
+### 6.1 vue-router的安装
+
+​			在终端运行命令`npm install vue router`即可安装
+
+![](./assets/router_install.png)
+
+
+
+### 6.2 vue-router的使用
+
+  1. #### 在项目中创建router文件夹，在文件夹下面创建index.js
+
+     ![](./assets/router_use1.png)
+
+     
+
+  2. #### 在index.js中使用vue-router插件，具体代码如下：
+
+     
+
+     ```js
+     import VueRouter from 'vue-router'
+     import Vue from 'vue'
+     
+     // 通过Vue.use()使用插件
+     Vue.use(VueRouter);
+     
+     // 创建router实例
+     const routes = [];
+     const router = new VueRouter({
+         routes:routes
+     })
+     
+     // 通过export导出
+     export default router
+     ```
+
+  3. #### 在main.js中导入router
+
+     ![](./assets/vue_use2.png)
+
+     
+
+  4. #### 配置映射
+
+     
+
+     a. 先创建两个组件
+
+![](./assets/router_use3.png)
+
+​				b. 在index.js中配置路由映射
+
+![](./assets/router_use4.png)
+
+​				c. 将路由写到App.vue中
+
+![](./assets/router_use5.jpg)
+
+   5. #### 效果展示
+
+![](./assets/router_use6.png)
+
+![](./assets/router_use7.png)
+
+
+
+### 6.3 router-link 属性补充
+
+属性1：to									  作用：url的转换
+
+属性2：tag									作用：把router—link标签渲染成其他标签
+
+属性3：replace							 作用：无法返回上一级
+
+属性4：active-class					作用：点击的时候增加active的class
+
+
+
+
+
