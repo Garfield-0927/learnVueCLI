@@ -151,3 +151,37 @@ vue ui
 
 
 
+
+
+## 7. Promise
+
+```javascript
+    new Promise((resolve,reject)=>{
+       setTimeout(()=>{
+        //  resolve('Look! this is promise');
+        //  reject('Request Failed!!!!')
+       },1000)
+    }).then( res => {
+      console.log(res);
+      console.log(res);
+      console.log(res);
+      console.log(res);
+      console.log(res);
+    }).catch( err =>{
+      console.log(err);
+      console.log(err);
+      console.log(err);
+      console.log(err);
+    })
+```
+
+​		使用方法如上述代码。
+
+​		具体逻辑如下：
+
+​		首先new了一个promise对象，生成promise实例。promise的构造函数接受一个参数作为参数，该函数的两个参数分别是`resolve`和`reject`。
+
+​		`resolve`函数的作用是，将`Promise`对象的状态从“未完成”变为“成功”（即从 pending 变为 resolved），在异步操作成功时调用，并将异步操作的结果，作为参数传递出去；当调用`reslove`函数的时候，会运行`.then`后面的代码，
+
+​		 `reject`函数的作用是，将`Promise`对象的状态从“未完成”变为“失败”（即从 pending 变为 rejected），在异步操作失败时调用，并将异步操作报出的错误，作为参数传递出去。当调用`reject`函数的时候，会运行`.catch`后面的代码，
+
